@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html
+xmlns:th="http://thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+<head>
+    <title>Evento app</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+    <header>
+		<nav class="menu">
+		    <div class="nav-wrapper">
+		      <a href="#" class="brand-logo">Cadastro de Eventos</a>
+		    </div>
+		</nav>
+	
+    </header>
+    
+    <form method="POST">
+        Nome:    <input type="text" value="" name="nome">
+        Local:   <input type="text" value="" name="local">
+        Data:    <input type="date" value="" name="data" th:attr="min=${now}">
+        Horário: <input type="time" value="" name="horario">
+
+        <button class="btn waves-effect waves-light right" type="submit" name="action">
+        	Cadastrar
+		</button>
+
+    </form>
+</body>
+</html>
